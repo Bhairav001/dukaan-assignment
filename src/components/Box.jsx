@@ -4,8 +4,10 @@ const Box = () => {
   return (
     <div className='flex justify-center items-center gap-10'>
 
-    <div className="box-border h-32 w-64 p-4 border-4 ... bg-blue-900">
-        <div className='text-white'>
+<div class="flex h-32 w-64 p-5 border-4 border-blue-900 flex-col items-start gap-4 rounded-md bg-primary-blue">
+</div>
+
+        {/* <div className='text-white'>
             <p>Next payout</p>
             <div className='flex gap-10'>
                 <div>
@@ -23,8 +25,7 @@ const Box = () => {
                     <p>Totally available</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> */}
     <div class="box-border h-32 w-64 p-4 border-4 ...">
        
        </div>
