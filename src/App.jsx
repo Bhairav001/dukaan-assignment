@@ -6,7 +6,6 @@ import Layout from './layout/Layout'
 import Dashboard from './pages/Dashboard'
 
 function App() {
-
   return (
        <Routes>
            <Route path='/' element={<Layout/>}>
