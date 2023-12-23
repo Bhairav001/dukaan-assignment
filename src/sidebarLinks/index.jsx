@@ -48,13 +48,13 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 	},
 	{
 		key: 'transactions',
-		label: 'Payouts',
+		label: 'Layouts',
 		path: '/transactions',
 		icon: <HiOutlineDocumentText />
 	},
 	{
 		key: 'messages',
-		label: 'Discounts',
+		label: 'message',
 		path: '/messages',
 		icon: <HiOutlineAnnotation />
 	},
