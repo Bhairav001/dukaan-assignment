@@ -38,13 +38,18 @@ const Box = () => {
             </div>
         </div> */}
             <div class="box-border h-32 w-64 p-4 border-4 ...">
-            <div class="justify-between items-center self-stretch">
+            <div class="flex justify-between items-center self-stretch">
                         <p>Amount Pending</p>
-                        <h2>92312.20</h2>
+                        <FaRegCircleQuestion />
                     </div>
+                <h2>90328.20</h2>
             </div>
             <div class="box-border h-32 w-64 p-4 border-4 ...">
-
+            <div class="flex justify-between items-center self-stretch">
+                        <p>Amount Proceed</p>
+                        <FaRegCircleQuestion />
+                    </div>
+                <h2>78538.20</h2>
             </div>
         </div>
     )
