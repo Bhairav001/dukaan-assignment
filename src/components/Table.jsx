@@ -11,7 +11,7 @@ const recentOrderData = [
 		customer_name: 'Shirley A. Lape',
 		order_date: '2022-05-17T03:24:00',
 		order_total: '$435.50',
-		current_order_status: 'PLACED',
+		current_order_status: 'Processing',
 		shipment_address: 'Cottage Grove, OR 97424'
 	},
 	{
@@ -21,7 +21,7 @@ const recentOrderData = [
 		customer_name: 'Ryan Carroll',
 		order_date: '2022-05-14T05:24:00',
 		order_total: '$96.35',
-		current_order_status: 'CONFIRMED',
+		current_order_status: 'Successfull',
 		shipment_address: 'Los Angeles, CA 90017'
 	},
 	{
@@ -31,7 +31,7 @@ const recentOrderData = [
 		customer_name: 'Mason Nash',
 		order_date: '2022-05-17T07:14:00',
 		order_total: '$836.44',
-		current_order_status: 'SHIPPED',
+		current_order_status: 'Successfull',
 		shipment_address: 'Westminster, CA 92683'
 	},
 	{
@@ -41,7 +41,7 @@ const recentOrderData = [
 		customer_name: 'Luke Parkin',
 		order_date: '2022-05-16T12:40:00',
 		order_total: '$334.50',
-		current_order_status: 'SHIPPED',
+		current_order_status: 'Successfull',
 		shipment_address: 'San Mateo, CA 94403'
 	},
 	{
@@ -51,7 +51,7 @@ const recentOrderData = [
 		customer_name: 'Anthony Fry',
 		order_date: '2022-05-14T03:24:00',
 		order_total: '$876.00',
-		current_order_status: 'OUT_FOR_DELIVERY',
+		current_order_status: 'Successfull',
 		shipment_address: 'San Mateo, CA 94403'
 	},
 	{
@@ -61,7 +61,7 @@ const recentOrderData = [
 		customer_name: 'Ryan Carroll',
 		order_date: '2022-05-14T05:24:00',
 		order_total: '$96.35',
-		current_order_status: 'DELIVERED',
+		current_order_status: 'Successfull',
 		shipment_address: 'Los Angeles, CA 90017'
 	}
 ]
@@ -74,31 +74,31 @@ export default function Table() {
 				<table className="w-full text-gray-700">
 					<thead>
 						<tr>
-							<th>ID</th>
-							<th>Product ID</th>
-							<th>Customer Name</th>
-							<th>Order Date</th>
-							<th>Order Total</th>
-							<th>Shipping Address</th>
 							<th>Order Status</th>
+							<th>Transaction ID</th>
+							<th>Order amount</th>
+							{/* <th>Customer Name</th> */}
+							<th>Transaction fees</th>
+							<th>Order Total</th>
+							{/* <th>Shipping Address</th> */}
 						</tr>
 					</thead>
 					<tbody>
 						{recentOrderData.map((order) => (
 							<tr key={order.id}>
+								<td>{getOrderStatus(order.current_order_status)}</td>
 								<td>
 									<Link to={`/order/${order.id}`}>#{order.id}</Link>
 								</td>
 								<td>
 									<Link to={`/product/${order.product_id}`}>#{order.product_id}</Link>
 								</td>
-								<td>
+								{/* <td>
 									<Link to={`/customer/${order.customer_id}`}>{order.customer_name}</Link>
-								</td>
-								<td>{format(new Date(order.order_date), 'dd MMM yyyy')}</td>
+								</td> */}
+								<td>{order.customer_id}</td>
 								<td>{order.order_total}</td>
-								<td>{order.shipment_address}</td>
-								<td>{getOrderStatus(order.current_order_status)}</td>
+								{/* <td>{order.shipment_address}</td> */}
 							</tr>
 						))}
 					</tbody>
